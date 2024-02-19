@@ -1,12 +1,16 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const ClimateActionChallenges = () => {
-  // Implement gamified challenges here
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate('/climate-action-challenges');
+  };
 
   return (
     <div>
-      <h2>Climate Action Challenges</h2>
-      {/* Implement gamified challenges UI here */}
+      <button onClick={handleClick}>Climate Action Challenges</button>
     </div>
   );
 };

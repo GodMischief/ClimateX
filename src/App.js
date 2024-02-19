@@ -41,7 +41,6 @@ function App() {
                     <RenewableEnergyMap />
                     <ClimateActionChallenges />
                     <EnvironmentalNews />
-                    <Profile />
                   </>
                 }
               />

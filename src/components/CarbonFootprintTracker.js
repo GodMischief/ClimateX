@@ -1,18 +1,16 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const CarbonFootprintTracker = () => {
-  const [carbonFootprint, setCarbonFootprint] = useState(0);
+  const navigate = useNavigate();
 
-  // Function to handle updating carbon footprint
-  const handleUpdateCarbonFootprint = (value) => {
-    setCarbonFootprint(value);
+  const handleClick = () => {
+    navigate('/carbon-footprint');
   };
 
   return (
     <div>
-      <h2>Carbon Footprint Tracker</h2>
-      <p>Current Carbon Footprint: {carbonFootprint}</p>
-      {/* Implement input fields or buttons to update the carbon footprint */}
+      <button onClick={handleClick}>Carbon Footprint Tracker</button>
     </div>
   );
 };

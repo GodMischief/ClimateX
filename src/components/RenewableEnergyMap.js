@@ -1,12 +1,16 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const RenewableEnergyMap = () => {
-  // Implement map functionality here
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate('/renewable-energy-map');
+  };
 
   return (
     <div>
-      <h2>Renewable Energy Resource Map</h2>
-      {/* Implement map display here */}
+      <button onClick={handleClick}>Renewable Energy Resource Map</button>
     </div>
   );
 };

@@ -1,26 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const EnvironmentalNews = () => {
-  const [news, setNews] = useState([]);
+  const navigate = useNavigate();
 
-  // Function to fetch environmental news
-  useEffect(() => {
-    // Fetch news data here and update state
-  }, []);
+  const handleClick = () => {
+    navigate('/environmental-news');
+  };
 
   return (
     <div>
-      <h2>Environmental News</h2>
-      <ul>
-        {/* Render news articles here */}
-        {news.map((article, index) => (
-          <li key={index}>
-            <a href={article.url} target="_blank" rel="noopener noreferrer">
-              {article.title}
-            </a>
-          </li>
-        ))}
-      </ul>
+      <button onClick={handleClick}>Environmental News</button>
     </div>
   );
 };
