@@ -5,7 +5,7 @@ const CarbonFootprintTracker = () => {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate('/carbon-footprint');
+    navigate('/carbon-footprint-page');
   };
 
   return (

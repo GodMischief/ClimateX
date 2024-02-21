@@ -1,13 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aladin&display=swap');
 
 /* Variables */
 :root {
-  --font-family: 'Poppins', sans-serif;
+  --header-font-family:"Aladin", system-ui;
+  --header-fonnt-color: #096A2E;
+  --font-family: "Fira Sans Extra Condensed", sans-serif;
   --color-bg: #f2f2f2;
   --color-text: #000000;
   --color-primary: #1976d2;
   --color-accent: #ff4081;
-  --background-image: url("minimalist.jpg") no-repeat center/cover;
+  --background-image: url("minimalist.png") no-repeat center/cover;
   --box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   --header-background: rgba(255, 255, 255, 0.8);
   --semi-transparent-white: rgba(255, 255, 255, 0.374);
@@ -40,31 +43,43 @@ main {
 }
 
 /* Header Styles */
-/* Header Styles */
 header {
   width: 100%;
+  height: 75px;
   background: var(--header-background);
-  padding: 0.5rem;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  position: fixed; /* Fixed position to keep it at the top */
+  top: 0; /* Positioned at the top */
+  z-index: 1000; /* Ensure it's above other content */
 }
 
 header:hover {
   background-color: var(--semi-transparent-white);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
-  
 }
 
 header h1 {
-  font-size: 1.5rem;
+  font-family: var(--header-font-family);
+  font-size: 2rem;
   margin-right: 15px;
-  color: var(--color-primary);
+  color: var(--header-fonnt-color); /* Typo: Change "--header-fonnt-color" to "--header-font-color" */
+}
+
+.header-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+}
+
+.header-links{
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
 }
 
 img.user-img{
+  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -109,6 +124,7 @@ article:hover {
 button {
   margin: 1rem 0.5rem;
   font-size: 1rem;
+  font-family: var(--font-family);
   padding: 0.8em 1.8em;
   cursor: pointer;
   border-radius: 0.5rem;
@@ -126,6 +142,16 @@ button:hover {
   position: absolute;
   width: fit-content;
   bottom: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.signout{
+  position: absolute;
+  width: fit-content;
+  top: 20%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -152,9 +178,16 @@ button.signout-btn:hover {
 
 button.signout-btn{
   position: absolute;
-  top: -7px;
-  right: 65px;
+  top: -140px;
+  right: -145%;
 
+}
+
+.column{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .profile-popup {
@@ -187,6 +220,26 @@ button.close-btn {
   box-shadow: none;
 }
 
+
+.carbon-list{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.climate-action-challenges{
+  display: flex;
+  margin: 1rem;
+  font-weight: bold;
+}
+
+.completed-challenges{
+  display: flex;
+  margin: 1rem;
+}
 
 /* Footer Styles */
 footer {

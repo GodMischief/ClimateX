@@ -5,7 +5,7 @@ const ClimateActionChallenges = () => {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate('/climate-action-challenges');
+    navigate('/climate-action-challenges-page');
   };
 
   return (

@@ -12,10 +12,6 @@ const LogoutButton = () => {
                 {/* Displaying a thank-you message */}
                 <h1>Thanks for using ClimateX!</h1>
 
-                {/* Button for initiating the logout process */}
-                <button className='signout-btn' onClick={() => logout()}>
-                    Sign Out
-                </button>
             </div>
         )
     );

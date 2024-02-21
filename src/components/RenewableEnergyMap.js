@@ -5,7 +5,7 @@ const RenewableEnergyMap = () => {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate('/renewable-energy-map');
+    navigate('/renewable-energy-map-page');
   };
 
   return (

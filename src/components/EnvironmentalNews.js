@@ -5,7 +5,7 @@ const EnvironmentalNews = () => {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate('/environmental-news');
+    navigate('/environmental-news-page');
   };
 
   return (
