@@ -16,22 +16,24 @@ function Header() {
     <div>
       {/* Header section with a title and navigation */}
       <header>
-      <div className='header-container'>
-        {/* Make the header title clickable to redirect to home */}
-        <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
-          <h1 className='header-h1'>ClimateX</h1>
-        </Link>
-        <div className='header-links'>
-        {isAuthenticated && user && user.picture && (
-          <div>
-            {/* Render user image as a clickable element */}
-            <img className="user-img" src={user.picture} alt={user?.name} onClick={toggleProfile} />
-            {/* Render logout button */}
+        <div className='header-container'>
+          {/* Make the header title clickable to redirect to home */}
+          <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
+            <h1 className='header-h1'>ClimateX</h1>
+          </Link>
+          <div className='header-links'>
+            {isAuthenticated && user && user.picture && (
+              <div>
+                {/* Render user image as a clickable element */}
+                <img className="user-img" src={user.picture} alt={user?.name} onClick={toggleProfile} />
+              </div>
+            )}
+            {/* Render logout button only if authenticated */}
+            {isAuthenticated && (
+              <button onClick={() => logout()}>Logout</button>
+            )}
           </div>
-        )}
-        <button onClick={() => logout()}>Logout</button>
-      </div>
-      </div>
+        </div>
       </header>
       {/* Render profile popup if showProfile is true */}
       {showProfile && <ProfilePopup onClose={toggleProfile} />}

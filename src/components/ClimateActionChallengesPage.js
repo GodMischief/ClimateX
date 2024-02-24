@@ -24,7 +24,7 @@ const ClimateActionChallengesPage = () => {
   };
 
   return (
-    <div>
+    <div className='cac'>
       <h2>Climate Action Challenges</h2><br/>
       <p>Select the challenges you want to participate in:</p><br/>
       <ol>

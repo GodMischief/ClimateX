@@ -241,6 +241,20 @@ button.close-btn {
   margin: 1rem;
 }
 
+.renewable-energy-map{
+  width: 100%;
+  margin-top: 10px;
+}
+
+.rerm-h2{
+  margin-top: 80px;
+  font-weight: bold;
+}
+
+.cac{
+  margin-top: 90px;
+}
+
 /* Footer Styles */
 footer {
   margin-top: auto;
